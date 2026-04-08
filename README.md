@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🥗 אתר המתכונים השמח
 
-## Getting Started
+אתר מתכונים מעוצב, ידידותי למשתמש ובעיקר - שמח! האתר נבנה עם דגש על חוויית משתמש מעולה, תמיכה מלאה בעברית (RTL) ועיצוב מודרני שמתאים לכל המכשירים.
 
-First, run the development server:
+## 🚀 פריסה ל-Cloudflare Pages
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+האתר מוכן לפריסה כאתר סטטי ב-Cloudflare Pages.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### שלבי הפריסה:
+1.  **חיבור ל-GitHub:** התחברו ללוח הבקרה של Cloudflare Pages וחברו את חשבון ה-GitHub שלכם.
+2.  **בחירת המאגר:** בחרו את המאגר `recipes-website`.
+3.  **הגדרות בנייה (Build Settings):**
+    *   **Framework preset:** `Next.js`
+    *   **Build command:** `npm run build`
+    *   **Build output directory:** `out`
+4.  **הגדרת דומיין:**
+    *   עברו ללשונית "Custom domains" בלוח הבקרה של הפרויקט ב-Cloudflare.
+    *   לחצו על "Set up a custom domain" ועקבו אחר ההוראות לחיבור הדומיין שלכם.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🥣 הוספת מתכון חדש
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+כדי להוסיף מתכון חדש לאתר, עקבו אחר השלבים הבאים:
 
-## Learn More
+1.  **עדכון הנתונים:** פתחו את הקובץ `src/data/recipes.ts` והוסיפו אובייקט מתכון חדש למערך ה-`recipes`. ודאו שאתם ממלאים את כל השדות (כותרת, תיאור, מרכיבים ספציפיים, זמן הכנה וכו').
+2.  **הוספת הנחיית תמונה (Image Prompt):** הוסיפו שדה `imagePrompt` עם תיאור אומנותי באנגלית של המנה (למשל: "An artistic watercolor painting of...").
+3.  **יצירת התמונה:**
+    *   אם ברצונכם להוריד את התמונה באופן אוטומטי, הוסיפו את ה-slug של המתכון החדש לקובץ `scripts/generate_images.sh`.
+    *   הריצו את הפקודה: `bash scripts/generate_images.sh`.
+4.  **בדיקה מקומית:** הריצו `npm run dev` וודאו שהמתכון מופיע ומוצג בצורה תקינה.
+5.  **דחיפה ל-GitHub:** בצעו `git commit` ו-`git push`. האתר יתעדכן אוטומטית ב-Cloudflare Pages!
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ טכנולוגיות
+*   **Next.js 15 (App Router)**
+*   **Tailwind CSS (RTL support)**
+*   **Lucide React Icons**
+*   **Static Site Generation (SSG)**
+*   **AI-Generated Artistic Imagery**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+תהנו מהבישול! 🎨👩‍🍳👨‍🍳
